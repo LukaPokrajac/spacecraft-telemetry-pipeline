@@ -1,0 +1,9 @@
+flowchart LR
+    A[Telemetry Generator<br/>Python] --> B[Kafka Topic: spacecraft.telemetry.raw]
+    B --> C[Consumer + Validator<br/>Python]
+    C --> D[(Postgres: raw_telemetry)]
+    C --> E[(Postgres: cleaned_telemetry)]
+    C --> F[(Postgres: telemetry_alerts)]
+    E --> G[Streamlit Dashboard]
+    F --> G
+    E --> H[Spark Practice Job]
