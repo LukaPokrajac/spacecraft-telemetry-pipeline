@@ -139,8 +139,3 @@ python src/spark_job.py
 ## Architecture
 
 ![Architecture](architecture.svg)
-
-## Notes for Portfolio Polish
-
-- Add real screenshots after first successful run.
-- Expand anomaly logic with moving average and z-score in next iteration.
