@@ -63,6 +63,31 @@ Generator realism:
 
 ## Setup
 
+```bash
+make setup       # create venv and install dependencies
+make env         # copy .env.example to .env
+make up          # start Kafka + Postgres via Docker
+```
+
+## Running
+
+```bash
+make generator   # start telemetry producer
+make consumer    # start stream consumer + validator (new terminal)
+make dashboard   # launch Streamlit dashboard (new terminal)
+make spark       # run optional Spark aggregation job
+```
+
+## Other
+
+```bash
+make logs        # tail Docker service logs
+make down        # stop Docker services
+make clean       # stop Docker + remove volumes + clear __pycache__
+```
+
+### Manual setup (without Make)
+
 1) Create virtual environment and install dependencies:
 
 ```bash
@@ -109,10 +134,13 @@ python src/spark_job.py
 
 ## Screenshots
 
-Add dashboard screenshots to a folder like `screenshots/` and link them here.
+![Dashboard](screenshots/Screenshot_2026-04-16_21-14-07.png)
+
+## Architecture
+
+![Architecture](architecture.svg)
 
 ## Notes for Portfolio Polish
 
-- Export `architecture.mmd` to PNG/SVG and include in README.
 - Add real screenshots after first successful run.
 - Expand anomaly logic with moving average and z-score in next iteration.
