@@ -1,4 +1,4 @@
-# Spacecraft Telemetry Pipeline (Project 1)
+# Spacecraft Telemetry Pipeline
 
 Tiny mission-control style data pipeline:
 
